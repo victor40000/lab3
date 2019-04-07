@@ -9,7 +9,18 @@ $(document).ready(function(){
 	body.appendChild(cnv);
 	context = cnv.getContext('2d');
 	context.strokeRect(15, 15, 266, 266);
-	console.log("123");
+	var data = httpGet("https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=ru");
+	// var quote = data.quoteText;
+	console.log(data.quoteText);
+
+	function httpGet(theUrl)
+	{
+	    var xmlHttp = new XMLHttpRequest();
+	    xmlHttp.open( "GET", theUrl, false ); 
+	    xmlHttp.send( null );
+	    return xmlHttp.responseText;
+	}
+
 });
 
         
