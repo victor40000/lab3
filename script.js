@@ -1,4 +1,4 @@
-$(document).ready(function(){
+// $(document).ready(function(){
 	width = 500;
     height = 500;
     body = document.getElementsByTagName('body')[0];
@@ -65,6 +65,6 @@ $(document).ready(function(){
 	    return xmlHttp.responseText;
 	}
 
-});
+// });
 
         
